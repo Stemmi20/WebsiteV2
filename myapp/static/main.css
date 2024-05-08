@@ -4,6 +4,7 @@
 
 body {
     overflow: hidden;
+    margin: 0;
 }
 
 .indexbody {
@@ -111,11 +112,21 @@ tr:nth-child(even) {
     background-color: rgb(97, 166, 255);
 }
 
-
-.navbar_darkred {
-    background-color: rgb(97, 156, 9);
-}
-
 .navbar_darkred {
     background-color: darkred;
+    padding: 2rem;
+    width: 100%;
+    margin: 0;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.button {
+    padding: 4px 8px;
+    background-color: blue;
+    border-radius: 8px;
 }

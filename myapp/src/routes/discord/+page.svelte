@@ -1,6 +1,6 @@
 <div class="text-center">
     <button id="joindiscord" class="rounded discrod_bg"><img class="logo_join_the_discord"
-            src="Join_the_Discord_smal.jpg" alt="discord-logo"></button>
+            src="/Join_the_Discord_smal.jpg" alt="discord-logo"></button>
     <script>
         document.getElementById('joindiscord').onclick = function () {
             var url = 'https://discord.gg/DvRwC2m3';
