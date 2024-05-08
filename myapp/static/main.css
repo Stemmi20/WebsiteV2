@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+}
+
+.indexbody {
+    color: white;
+    background-color: black;
+}
+
+.bodyrules {
+    color: white;
+    background-color: black;
+}
+
+.bodyrulestext {
+    margin-top: 1%;
+    margin-left: 2%;
+}
+
+
+.dclogo {
+    box-shadow: 5px 5px 100px 12px lightblue;
+}
+
+.discrod_bg {
+    background-color: rgb(114, 137, 218);
+}
+
+.logo_join_the_discord {
+    max-width: 200px;
+    max-height: 250px;
+}
+
+.logo-discord {
+    max-width: 100px;
+    max-height: 150px;
+}
+
+
+.mclogo {
+    box-shadow: 10px 10px 100px 24px lightgreen;
+}
+
+.bodymc {
+    background: -webkit-linear-gradient(blue, green);
+    /* background-image: url(Minecraft/minecraft-BIG.jpg); */
+    min-height: 100vh;
+}
+
+.minecraftimgindex {
+    max-width: 200px;
+    max-height: 350px;
+}
+
+.minecraftbutton {
+    font-size: large;
+    background-color: green;
+}
+
+
+.row {
+    width: 100vw !important;
+    margin-left: 20px;
+    margin-right: 0 !important
+}
+
+.column {
+    margin-left: 25px;
+    width: 9%;
+    padding: 5px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 2px solid #000;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+
+
+.button {
+    background-color: #0074f8;
+}
+
+.imgdimmer {
+    filter: contrast(200%);
+}
+
+.background_blue {
+    background-color: rgb(97, 166, 255);
+}
+
+
+.navbar_darkred {
+    background-color: rgb(97, 156, 9);
+}
+
+.navbar_darkred {
+    background-color: darkred;
+}
