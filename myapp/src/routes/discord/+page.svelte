@@ -1,5 +1,5 @@
 <div class="text-center">
-    <button id="joindiscord" class="rounded discrod_bg"><img class="logo_join_the_discord"
+    <button id="joindiscord" class="rounded bg-[rgb(114,137,218)]"><img class="max-w-200px max-h-250px"
             src="/Join_the_Discord_smal.jpg" alt="discord-logo"></button>
     <script>
         document.getElementById('joindiscord').onclick = function () {

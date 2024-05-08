@@ -1,4 +1,4 @@
-<div class="bodyrulestext">
+<div class="mt-[1%] ml-[2%]">
     <h1>Rules</h1>
 
     <h5>If you bake one of these Rules you will get an timeout or permenatly Banned</h5>

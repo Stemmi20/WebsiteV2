@@ -1,4 +1,4 @@
-<div style="color: white;" class="imgdimmer link_color">
+<div style="color: white;" class="contrast-NaN link_color">
     <h1 class="text-center" style="margin: 0;">Minecraft</h1>
     <br>
     <h4 class="text-center">You want to Play Minecraft?</h4>
@@ -6,7 +6,7 @@
     <br>
     <div class="text-center">
         <button id="joindiscordminecraft" on:click={()=>location.href='https://discord.gg/cxRbADAk'}
-            class="rounded text-center minecraftbutton">Join
+            class="rounded text-center text-large bg-green">Join
             Server</button>
         <script>
             document.getElementById('joindiscordminecraft').onclick = function () {
@@ -25,8 +25,8 @@
     <h5 class="text-center">Here you can see the map of our minecraft world.</h5>
     <br>
     <div class="text-center">
-        <button class="rounded text-center minecraftbutton">Minecraft Overworld</button>
-        <button class="rounded text-center minecraftbutton">Minecraft Nether</button>
-        <button class="rounded text-center minecraftbutton">Minecraft End</button>
+        <button class="rounded text-center text-large bg-green">Minecraft Overworld</button>
+        <button class="rounded text-center text-large bg-green">Minecraft Nether</button>
+        <button class="rounded text-center text-large bg-green">Minecraft End</button>
     </div>
 </div>
