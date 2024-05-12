@@ -6,3 +6,16 @@
 		>Logout</a></div>
 </div>
 <slot />
+<script>
+	$:x=0
+	$:y=0
+</script>
+<svelte:window
+    on:mousemove={(e) => {
+        x = e.clientX;
+        y = e.clientY;
+		console.log(e.clientX)
+		console.log(e.clientY)
+    }}
+/>
+<div class="mousfollow" id="mousfollow"></div>

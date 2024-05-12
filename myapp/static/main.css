@@ -37,3 +37,15 @@ a {
     transform: scale(1.2); 
     color: darkred;
 }
+
+.mousfollow {
+    position: absolute;
+    width: 20px;
+    height: 20px;   
+    background-color: green;
+    border-radius: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    pointer-events: none;
+    transition: all 300ms ease-out;
+    z-index: 10000;
+}
