@@ -21,3 +21,19 @@ a {
 .button {
     background: -webkit-linear-gradient(rgb(0, 110, 255), rgb(22, 212, 16));
 }
+
+.enlarge { 
+    top:-50px; 
+    left:-35px; 
+    display:block; 
+    z-index:999; 
+    cursor: pointer; 
+    -webkit-transition-property: all; 
+    -webkit-transition-duration: 0.2s; 
+    -webkit-transition-timing-function: ease; 
+    } 
+    
+.enlarge:hover { 
+    transform: scale(1.2); 
+    color: darkred;
+}

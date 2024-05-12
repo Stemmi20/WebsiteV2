@@ -4,9 +4,9 @@
     <h4 class="text-center">You want to Play Minecraft?</h4>
     <h5 class="text-center">Then Join our Discord and endjoy playing Minecraft with us</h5>
     <br>
-    <div class="text-center">
-        <button id="joindiscordminecraft" on:click={()=>location.href='https://discord.gg/cxRbADAk'}
-            class="rounded text-center text-large bg-green">Join
+    <div class="text-center flex justify-center">
+        <button id="joindiscordminecraft" on:click={()=> window.open('https://discord.gg/cxRbADAk')}
+            class="rounded text-center text-large bg-green enlarge">Join
             Server</button>
         <script>
             document.getElementById('joindiscordminecraft').onclick = function () {
@@ -18,15 +18,21 @@
     </div>
     <br>
 
-    <h5 class="text-center">We are currently playing on the 1.20.4. You can Build whatever whereever you
+    <h5 class="text-center">We are currently playing on the newest version. You can Build whatever whereever you
         want to Build.</h5>
-    <h5 class="text-center text-danger">We have some <a class="" href="/minecraft/rules">Rules</a> that you have to
+    <h5 class="text-center">We have some <a class="text-red" href="/minecraft/rules">Rules</a> that you have to
         follow.</h5>
     <h5 class="text-center">Here you can see the map of our minecraft world.</h5>
     <br>
-    <div class="text-center">
-        <button class="rounded text-center text-large bg-green">Minecraft Overworld</button>
-        <button class="rounded text-center text-large bg-green">Minecraft Nether</button>
-        <button class="rounded text-center text-large bg-green">Minecraft End</button>
+    <div class="text-center flex justify-center gap-4">
+        <div class="enlarge">
+            <button class="rounded text-center text-large bg-green" on:click={() => window.open('http://195.201.243.96:8100/#world:0:0:0:1500:0:0:0:0:perspective')}>Minecraft Overworld</button>
+        </div>
+        <div class="enlarge">
+            <button class="rounded text-center text-large bg-green" on:click={() => window.open('http://195.201.243.96:8100/#world_nether:0:0:0:1500:0:0:0:0:perspective')}>Minecraft Nether</button>
+        </div>
+        <div class="enlarge">
+            <button class="rounded text-center text-large bg-green" on:click={() => window.open('http://195.201.243.96:8100/#world_the_end:0:0:0:1500:0:0:0:0:perspective')}>Minecraft End</button>
+        </div>
     </div>
 </div>
