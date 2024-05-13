@@ -48,13 +48,13 @@
 	}}
 />
 <div
-	class="pointer-events-none absolute -z-100 min-w-100 min-h-100 op-0 -ml-50 -mt-50 blur-100 bg-gradient-to-r from-[rgb(243,69,214)] to-[rgb(33,102,187)] rounded-full"
+	class="pointer-events-none fixed -z-100 min-w-100 min-h-100 op-0 -ml-50 -mt-50 blur-100 bg-gradient-to-r from-[rgb(243,69,214)] to-[rgb(33,102,187)] rounded-full"
 	style="left: {x}px; top: {y}px;"
 	id="rotate"
 	bind:this={blobSlow}
 ></div>
 <div
-	class="pointer-events-none absolute -z-100 min-w-100 min-h-100 op-0 -ml-50 -mt-50 blur-100 bg-gradient-to-r from-[rgb(243,69,214)] to-[rgb(33,102,187)] rounded-full"
+	class="pointer-events-none fixed -z-100 min-w-100 min-h-100 op-0 -ml-50 -mt-50 blur-100 bg-gradient-to-r from-[rgb(243,69,214)] to-[rgb(33,102,187)] rounded-full"
 	style="left: {x}px; top: {y}px;"
 	id="rotateFaster"
 	bind:this={blobFast}

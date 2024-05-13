@@ -5,6 +5,13 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { SECRET } from '$env/static/private';
 
+const regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/;
+
+function checkPassword(pass:string) {
+    return regex.test(pass);
+}
+
+
 const saltRounds = 2; // insecure, increase to 12 or more when NOT HOSTING ON A RASPBERRY PI
 
 export const POST: RequestHandler = async (req) => {
@@ -12,6 +19,8 @@ export const POST: RequestHandler = async (req) => {
 
 	const { password, name } = j;
 	if (!password || !name) return error(400, 'No password or username provided');
+
+	if(!checkPassword(password)) return error(400, 'Password is insecure');
 
 	const exists = await DataBase.users.findFirst({ where: { name }, select: { name: true } });
 	if (exists) return error(400, 'Username Taken');

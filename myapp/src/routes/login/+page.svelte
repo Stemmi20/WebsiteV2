@@ -11,12 +11,12 @@
 		const formJSON: { [key: string]: string } = {};
 		formData.forEach((val, k) => (formJSON[k] = val.toString().trim()));
 
-  const method = (e.submitter as HTMLInputElement).value as 'Log-In' | 'Register';
+		const method = (e.submitter as HTMLInputElement).value as 'Log-In' | 'Register';
 
 		const res = await fetch(`/api/${method === 'Log-In' ? 'login' : 'register'}`, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(formJSON),
+			body: JSON.stringify(formJSON)
 		});
 
 		if (!res.ok) {
@@ -40,7 +40,14 @@
 		on:submit={submit}
 		bind:this={form}
 	>
-		<input type="text" name="name" placeholder="Name" class="text-center font-size-xl" autocomplete="username" />
+		<input
+			type="text"
+			name="name"
+			placeholder="Name"
+			class="text-center font-size-xl"
+			autocomplete="username"
+		/>
+
 		<input
 			type="password"
 			name="password"
@@ -49,9 +56,19 @@
 			autocomplete="current-password"
 		/>
 
-		<div class="flex flex-row justify-evenly items-center gap-5 ">
-			<input type="submit" value="Log-In" class="hover:scale-105 font-size-xl" style="background: -webkit-linear-gradient(rgb(0, 110, 255), rgb(22, 212, 16))" />
-			<input type="submit" value="Register" class="hover:scale-105 font-size-xl" style="background: -webkit-linear-gradient(rgb(0, 110, 255), rgb(22, 212, 16))" />
+		<div class="flex flex-row justify-evenly items-center gap-5">
+			<input
+				type="submit"
+				value="Log-In"
+				class="hover:scale-105 font-size-xl"
+				style="background: -webkit-linear-gradient(rgb(0, 110, 255), rgb(22, 212, 16))"
+			/>
+			<input
+				type="submit"
+				value="Register"
+				class="hover:scale-105 font-size-xl"
+				style="background: -webkit-linear-gradient(rgb(0, 110, 255), rgb(22, 212, 16))"
+			/>
 		</div>
 	</form>
 </div>
