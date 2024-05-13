@@ -43,7 +43,7 @@
 		"@fortawesome/free-regular-svg-icons": "^6.5.2",
 		"@fortawesome/free-solid-svg-icons": "^6.5.2",
 		"@prisma/client": "^5.13.0",
-		"@sveltejs/adapter-cloudflare": "^4.4.0",
+		"@sveltejs/adapter-node": "^5.0.1",
 		"@unocss/reset": "^0.60.0",
 		"bcrypt": "^5.1.1",
 		"bits-ui": "^0.21.7",
