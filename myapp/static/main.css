@@ -35,17 +35,55 @@ a {
     
 .enlarge:hover { 
     transform: scale(1.2); 
-    color: darkred;
+    color: white;
 }
 
 .mousfollow {
     position: absolute;
     width: 20px;
     height: 20px;   
-    background-color: green;
+    background: -webkit-linear-gradient(rgb(243, 69, 214), rgb(33, 102, 187));
     border-radius: 50%;
     transform: translateX(-50%) translateY(-50%);
     pointer-events: none;
     transition: all 300ms ease-out;
     z-index: 10000;
+}
+
+#rotate {
+    animation: spin 10s infinite;
+}
+
+#rotateFaster {
+    animation: spinFaster 5s infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        scale: 1 1.5;
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinFaster {
+    from {
+        transform: rotate(0deg);
+        scale: 1 1.7;
+    }
+
+    50% {
+        scale: 1.7 1;
+    }
+
+    to {
+        transform: rotate(-360deg);
+        scale: 1 1.7;
+    }
 }

@@ -1,21 +1,62 @@
-<div id="menu" class="bg-red-7 p-1rem w-[100%] m-0 text-white flex flex-row justify-between items-center">
-	<div class="flex flex-row justify-center justify-start items-center gap-3"><a href="/" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Home</a> 
-	<a href="/minecraft" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Minecraft</a>
-	<a href="/discord" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Discord</a></div>
-	<div><a href="/login" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge" on:click={() => fetch('/api/logout', { method: 'POST' }).then(() => window.location.reload())}
-		>Logout</a></div>
+<script lang="ts">
+	import { onMount } from "svelte";
+
+	let blobSlow: HTMLDivElement;
+	let blobFast: HTMLDivElement;
+
+	$: x = 0;
+	$: y = 0;
+	let lastUpdate = Date.now();
+
+	onMount(() => {
+		[blobSlow, blobFast].forEach((b) => {
+			b?.animate([{ opacity: `0%` }, { opacity: `50%` }], {
+				duration: 3000,
+				delay: 2000,
+				fill: 'forwards',
+			});
+		});
+	});
+
+</script>
+
+<div
+	id="menu"
+	class="bg-red-7 p-1rem w-[100%] m-0 text-white flex flex-row justify-between items-center"
+>
+	<div class="flex flex-row justify-center justify-start items-center gap-3 text-white">
+		<a href="/" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Home</a>
+		<a href="/minecraft" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Minecraft</a>
+		<a href="/discord" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Discord</a>
+	</div>
+	<div>
+		<a
+			href="/login"
+			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
+			on:click={() => fetch('/api/logout', { method: 'POST' }).then(() => window.location.reload())}
+			>Logout</a
+		>
+	</div>
 </div>
 <slot />
-<script>
-	$:x=0
-	$:y=0
-</script>
 <svelte:window
-    on:mousemove={(e) => {
-        x = e.clientX;
-        y = e.clientY;
-		console.log(e.clientX)
-		console.log(e.clientY)
-    }}
+	on:mousemove={(e) => {
+		if (lastUpdate + 10 < Date.now()) {
+			lastUpdate = Date.now();
+			x = e.clientX;
+			y = e.clientY;
+		}
+	}}
 />
-<div class="mousfollow" id="mousfollow"></div>
+<div
+	class="mousfollow absolute -z-100 w-100 h-100 op-0 -ml-50 -mt-50 blur-100"
+	style="left: {x}px; top: {y}px;"
+	id="rotate"
+	bind:this={blobSlow}
+></div>
+<div
+	class="mousfollow absolute -z-100 w-100 h-100 op-0 -ml-50 -mt-50 blur-100"
+	style="left: {x}px; top: {y}px;"
+	id="rotateFaster"
+	bind:this={blobFast}
+></div>

@@ -50,8 +50,8 @@
 		/>
 
 		<div class="flex flex-row justify-evenly items-center gap-5 ">
-			<input type="submit" value="Register" class="hover:scale-105 font-size-xl" style="background: -webkit-linear-gradient(rgb(0, 110, 255), rgb(22, 212, 16))" />
 			<input type="submit" value="Log-In" class="hover:scale-105 font-size-xl" style="background: -webkit-linear-gradient(rgb(0, 110, 255), rgb(22, 212, 16))" />
+			<input type="submit" value="Register" class="hover:scale-105 font-size-xl" style="background: -webkit-linear-gradient(rgb(0, 110, 255), rgb(22, 212, 16))" />
 		</div>
 	</form>
 </div>
