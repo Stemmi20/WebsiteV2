@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from "svelte";
+	import { onMount } from 'svelte';
 
 	let blobSlow: HTMLDivElement;
 	let blobFast: HTMLDivElement;
@@ -13,11 +13,10 @@
 			b?.animate([{ opacity: `0%` }, { opacity: `50%` }], {
 				duration: 3000,
 				delay: 2000,
-				fill: 'forwards',
+				fill: 'forwards'
 			});
 		});
 	});
-
 </script>
 
 <div
@@ -49,14 +48,66 @@
 	}}
 />
 <div
-	class="mousfollow absolute -z-100 w-100 h-100 op-0 -ml-50 -mt-50 blur-100"
+	class="mousfollow absolute -z-100 min-w-100 min-h-100 op-0 -ml-50 -mt-50 blur-100"
 	style="left: {x}px; top: {y}px;"
 	id="rotate"
 	bind:this={blobSlow}
 ></div>
 <div
-	class="mousfollow absolute -z-100 w-100 h-100 op-0 -ml-50 -mt-50 blur-100"
+	class="mousfollow absolute -z-100 min-w-100 min-h-100 op-0 -ml-50 -mt-50 blur-100"
 	style="left: {x}px; top: {y}px;"
 	id="rotateFaster"
 	bind:this={blobFast}
 ></div>
+
+<style scoped>
+	#rotate {
+		animation: spin 10s infinite;
+	}
+
+	#rotateFaster {
+		animation: spinFaster 5s infinite;
+	}
+
+	@keyframes spin {
+		from {
+			transform: rotate(0deg);
+		}
+
+		50% {
+			scale: 1 1.5;
+		}
+
+		to {
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes spinFaster {
+		from {
+			transform: rotate(0deg);
+			scale: 1 1.7;
+		}
+
+		50% {
+			scale: 1.7 1;
+		}
+
+		to {
+			transform: rotate(-360deg);
+			scale: 1 1.7;
+		}
+	}
+
+	.mousfollow {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background: -webkit-linear-gradient(rgb(243, 69, 214), rgb(33, 102, 187));
+		border-radius: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		pointer-events: none;
+		transition: all 300ms ease-out;
+		z-index: 10000;
+	}
+</style>
