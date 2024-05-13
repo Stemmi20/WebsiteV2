@@ -7,12 +7,12 @@
 	<div class="text-center flex justify-center">
 		<button
 			id="joindiscordminecraft"
-			on:click={() => window.open('https://discord.gg/cxRbADAk')}
+			on:click={() => window.open('https://discord.gg/evadWedvUx')}
 			class="rounded text-center text-large bg-green enlarge">Join Server</button
 		>
 		<script>
 			document.getElementById('joindiscordminecraft').onclick = function () {
-				var url = 'https://discord.gg/cxRbADAk';
+				var url = 'https://discord.gg/evadWedvUx'';
 				var win = window.open(url, '_blank');
 				win.focus;
 			};
