@@ -81,12 +81,18 @@ importers:
       '@sveltejs/vite-plugin-svelte':
         specifier: ^3.1.0
         version: 3.1.0(svelte@5.0.0-next.127)(vite@5.2.11(@types/node@20.12.11))
+      '@types/bcrypt':
+        specifier: ^5.0.2
+        version: 5.0.2
       '@types/eslint':
         specifier: ^8.56.10
         version: 8.56.10
       '@types/js-cookie':
         specifier: ^3.0.6
         version: 3.0.6
+      '@types/jsonwebtoken':
+        specifier: ^9.0.6
+        version: 9.0.6
       '@types/node':
         specifier: ^20.12.11
         version: 20.12.11
@@ -784,6 +790,9 @@ packages:
   '@swc/helpers@0.5.11':
     resolution: {integrity: sha512-YNlnKRWF2sVojTpIyzwou9XoTNbzbzONwRhOoniEioF1AtaitTvVZblaQRrAzChWQ1bLYyYSWzM18y4WwgzJ+A==}
 
+  '@types/bcrypt@5.0.2':
+    resolution: {integrity: sha512-6atioO8Y75fNcbmj0G7UjI9lXN2pQ/IGJ2FWT4a/btd0Lk9lQalHLKhkgKVZ3r+spnmWUKfbMi1GEe9wyHQfNQ==}
+
   '@types/cookie@0.6.0':
     resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
 
@@ -798,6 +807,9 @@ packages:
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+
+  '@types/jsonwebtoken@9.0.6':
+    resolution: {integrity: sha512-/5hndP5dCjloafCXns6SZyESp3Ldq7YjH3zwzwczYnjxIT0Fqzk5ROSYVGfFyczIue7IUEj8hkvLbPoLQ18vQw==}
 
   '@types/node@20.12.11':
     resolution: {integrity: sha512-vDg9PZ/zi+Nqp6boSOT7plNuthRugEKixDv5sFTIpkE89MmNtEArAShI4mxuX2+UrLEe9pxC1vm2cjm9YlWbJw==}
@@ -3151,6 +3163,10 @@ snapshots:
     dependencies:
       tslib: 2.6.2
 
+  '@types/bcrypt@5.0.2':
+    dependencies:
+      '@types/node': 20.12.11
+
   '@types/cookie@0.6.0': {}
 
   '@types/eslint@8.56.10':
@@ -3163,6 +3179,10 @@ snapshots:
   '@types/js-cookie@3.0.6': {}
 
   '@types/json-schema@7.0.15': {}
+
+  '@types/jsonwebtoken@9.0.6':
+    dependencies:
+      '@types/node': 20.12.11
 
   '@types/node@20.12.11':
     dependencies:
