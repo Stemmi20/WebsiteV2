@@ -4,7 +4,7 @@
 
 body {
     background-color:rgb(53, 53, 53) ;
-    overflow: hidden;
+    overflow-x: hidden;
     margin: 0;
 }
 
@@ -31,10 +31,19 @@ a {
     -webkit-transition-property: all; 
     -webkit-transition-duration: 0.2s; 
     -webkit-transition-timing-function: ease; 
-    } 
-    
-.enlarge:hover { 
-    transform: scale(1.2); 
-    color: white;
-}
+    }
+    .enlarge:hover { 
+        transform: scale(1.2); 
+        color: white;
+    }
 
+.enlargemc { 
+    top:-50px; 
+    left:-35px; 
+    display:block; 
+    z-index:999; 
+    cursor: pointer; 
+    -webkit-transition-property: all; 
+    -webkit-transition-duration: 0.2s; 
+    -webkit-transition-timing-function: ease; 
+    }
