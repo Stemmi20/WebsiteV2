@@ -30,7 +30,7 @@
 		<a on:click={() => window.open('https://discord.gg/evadWedvUx')} class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Support</a>
 	</div>
 	<div class="flex flex-row gap-3">
-		<!-- <a href="/profile" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Profile</a> -->
+		<a href="/profile" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Profile</a>
 		<a
 			href="/login"
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
