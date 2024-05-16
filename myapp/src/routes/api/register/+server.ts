@@ -12,7 +12,7 @@ function checkPassword(pass:string) {
 }
 
 
-const saltRounds = 2; // insecure, increase to 12 or more when NOT HOSTING ON A RASPBERRY PI
+const saltRounds = 12;
 
 export const POST: RequestHandler = async (req) => {
 	const j = await req.request.json().catch(() => ({}));
@@ -31,13 +31,20 @@ export const POST: RequestHandler = async (req) => {
 		select: { id: true },
 	});
 
-	const token = jwt.sign({ id: user.id }, SECRET, { expiresIn: '30m' });
+	const token = jwt.sign({ id: user.id }, SECRET, { expiresIn: '1d' });
 	req.cookies.set('token', token, {
 		path: '/',
 		sameSite: true,
 		httpOnly: true,
 		secure: false,
-		expires: new Date(Date.now() + 1000 * 60 * 30),
+		expires: new Date(Date.now() + 1000 * 60 * 60 * 24),
+	});
+	req.cookies.set('userid', String(user.id) , {
+		path: '/',
+		sameSite: true,
+		httpOnly: true,
+		secure: false,
+		expires: new Date(Date.now() + 1000 * 60 * 60 * 24),
 	});
 
 	return json({ success: true });

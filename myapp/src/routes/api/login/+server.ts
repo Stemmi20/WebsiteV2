@@ -28,6 +28,14 @@ export const POST: RequestHandler = async (req) => {
 		secure: false,
 		expires: new Date(Date.now() + 1000 * 60 * 60 * 24),
 	});
+	req.cookies.set('userid', String(user.id) , {
+		path: '/',
+		sameSite: true,
+		httpOnly: true,
+		secure: false,
+		expires: new Date(Date.now() + 1000 * 60 * 60 * 24),
+	});
+
 
 	return json({ success: true });
 };
