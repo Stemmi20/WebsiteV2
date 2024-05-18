@@ -8,7 +8,9 @@ datasource db {
 }
 
 model users {
-  id       Int    @id @default(autoincrement())
-  name     String @db.Text
-  password String @db.Text
+  id        Int     @id @default(autoincrement())
+  username  String  @db.Text
+  password  String  @db.Text
+  firstname String? @db.Text
+  lastname  String? @db.Text
 }

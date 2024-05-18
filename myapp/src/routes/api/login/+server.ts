@@ -8,11 +8,11 @@ import { SECRET } from '$env/static/private';
 export const POST: RequestHandler = async (req) => {
 	const j = await req.request.json().catch(() => ({}));
 
-	const { password, name } = j;
-	if (!password || !name) return error(400, 'No password or username provided');
+	const { password, username } = j;
+	if (!password || !username) return error(400, 'No password or username provided');
 
 	const user = await DataBase.users.findFirst({
-		where: { name },
+		where: { username },
 		select: { password: true, id: true },
 	});
 	if (!user) return error(400, 'User does not exist');

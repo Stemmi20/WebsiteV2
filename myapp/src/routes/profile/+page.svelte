@@ -10,7 +10,7 @@
 			<input
 				type="text"
 				name="name"
-				placeholder="User Name: {data.user?.name}"
+				placeholder="User Name: {data.user?.username}"
 				class="text-center font-size-xl"
 				autocomplete="username"
 			/>
@@ -22,6 +22,7 @@
 				placeholder="First Name: "
 				class="text-center font-size-xl"
 				autocomplete="username"
+                readonly
 			/>
 		</div>
 		<div class="m-3">
@@ -31,6 +32,7 @@
 				placeholder="Last Name: "
 				class="text-center font-size-xl"
 				autocomplete="username"
+                readonly
 			/>
 		</div>
 		<div class="m-3">
@@ -115,6 +117,13 @@
 				placeholder="Confirm Password"
 				class="text-center font-size-xl"
 				autocomplete="current-password"
+			/>
+		</div>
+        <div class="flex flex-row justify-evenly items-center gap-5">
+			<input
+				type="submit"
+				value="Submit"
+				class="hover:scale-105 font-size-xl font-bold bg-gradient-to-r from-[#006EFF] via-[#16d410] to-[#006EFF] bg-[length:200%] p-2 px-6 rounded-xl transition-all bg-[position:0%_center] hover:bg-[position:100%_center] font-bold text-shadow-none disabled:opacity-50 disabled:cursor-not-allowed"
 			/>
 		</div>
 	</div>

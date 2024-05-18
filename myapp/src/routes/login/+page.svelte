@@ -27,7 +27,7 @@
 		window.location.href = '/';
 		
 	if (method === 'Log-In') window.location.href = "/";
-		else window.location.href = "/register"
+		else window.location.href = "/registerpage"
 	};
 </script>
 

@@ -17,17 +17,17 @@ const saltRounds = 12;
 export const POST: RequestHandler = async (req) => {
 	const j = await req.request.json().catch(() => ({}));
 
-	const { password, name } = j;
-	if (!password || !name) return error(400, 'No password or username provided');
+	const { password, username } = j;
+	if (!password || !username) return error(400, 'No password or username provided');
 
 	if(!checkPassword(password)) return error(400, 'Password is insecure');
 
-	const exists = await DataBase.users.findFirst({ where: { name }, select: { name: true } });
+	const exists = await DataBase.users.findFirst({ where: { username }, select: { username: true } });
 	if (exists) return error(400, 'Username Taken');
 
 	const hashed = await bcrypt.hash(password, saltRounds);
 	const user = await DataBase.users.create({
-		data: { name, password: hashed },
+		data: { username, password: hashed },
 		select: { id: true },
 	});
 
