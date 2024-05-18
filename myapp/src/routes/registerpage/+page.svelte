@@ -21,8 +21,8 @@
 		<div class="m-3">
 			<input
 				type="text"
-				name="name"
-				placeholder="User Name: {data.user?.name}"
+				name="username"
+				placeholder="User Name: {data.username?.username}"
 				class="text-center font-size-xl"
 				autocomplete="username"
 				readonly

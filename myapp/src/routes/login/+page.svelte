@@ -45,7 +45,7 @@
 	>
 		<input
 			type="text"
-			name="name"
+			name="username"
 			placeholder="Name"
 			class="text-center font-size-xl"
 			autocomplete="username"

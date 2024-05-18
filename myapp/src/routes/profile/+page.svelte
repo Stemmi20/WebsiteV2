@@ -1,4 +1,6 @@
 <script lang="ts">
+	let firstname: HTMLFormElement;
+	let lastname: HTMLFormElement;
 	import type { PageServerData } from './$types';
 
 	export let data: PageServerData;
@@ -9,8 +11,8 @@
 		<div class="m-3">
 			<input
 				type="text"
-				name="name"
-				placeholder="User Name: {data.user?.username}"
+				name="username"
+				placeholder="User Name: {data.username?.username}"
 				class="text-center font-size-xl"
 				autocomplete="username"
 			/>
@@ -18,8 +20,8 @@
 		<div class="m-3">
 			<input
 				type="text"
-				name="name"
-				placeholder="First Name: "
+				name="firstname"
+				placeholder="First Name: {data.firstname?.firstname}"
 				class="text-center font-size-xl"
 				autocomplete="username"
                 readonly
@@ -28,8 +30,8 @@
 		<div class="m-3">
 			<input
 				type="text"
-				name="name"
-				placeholder="Last Name: "
+				name="lastname"
+				placeholder="Last Name: {data.lastname?.lastname}"
 				class="text-center font-size-xl"
 				autocomplete="username"
                 readonly
@@ -68,7 +70,7 @@
 		<div class="m-3">
 			<input
 				type="text"
-				name="name"
+				name="username"
 				placeholder="User Name"
 				class="text-center font-size-xl"
 				autocomplete="username"
@@ -76,18 +78,20 @@
 		</div>
 		<div class="m-3">
 			<input
+				bind:value={firstname}
 				type="text"
 				name="name"
-				placeholder="First Name"
+				placeholder="First Name: "
 				class="text-center font-size-xl"
 				autocomplete="username"
 			/>
 		</div>
 		<div class="m-3">
 			<input
+				bind:value={lastname}
 				type="text"
 				name="name"
-				placeholder="Last Name"
+				placeholder="Last Name: "
 				class="text-center font-size-xl"
 				autocomplete="username"
 			/>
