@@ -12,7 +12,7 @@
 		>
 		<script>
 			document.getElementById('joindiscordminecraft').onclick = function () {
-				var url = 'https://discord.gg/evadWedvUx'';
+				var url = 'https://discord.gg/evadWedvUx';
 				var win = window.open(url, '_blank');
 				win.focus;
 			};
