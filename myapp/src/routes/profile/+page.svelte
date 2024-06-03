@@ -16,6 +16,7 @@
 				placeholder="User Name: {data.username?.username}"
 				class="text-center font-size-xl"
 				autocomplete="username"
+				readonly
 			/>
 		</div>
 		<div class="m-3">
