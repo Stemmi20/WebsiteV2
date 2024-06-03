@@ -1,6 +1,7 @@
 <script lang="ts">
 	let firstname: HTMLFormElement;
 	let lastname: HTMLFormElement;
+	
 	import type { PageServerData } from './$types';
 
 	export let data: PageServerData;
