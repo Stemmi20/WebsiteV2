@@ -34,13 +34,13 @@
 			<button
 				class="rounded text-center text-large bg-green"
 				on:click={() =>
-					window.open('http://195.201.243.96:8100/#world:0:0:0:1500:0:0:0:0:perspective')}
+					window.open('https://map.stemm1.org/#world:0:0:0:1500:0:0:0:0:perspective')}
 				>Minecraft Overworld</button
 			>
 		</div>
 		<div class="m-4">
 			<iframe
-				src="http://195.201.243.96:8100/#world:0:0:0:1500:0:0:0:0:perspective"
+				src="https://map.stemm1.org/#world:0:0:0:1500:0:0:0:0:perspective"
 				title="World"
 				class="enlargemc m-auto z-1000"
 				style="zoom: 500%"
@@ -50,13 +50,13 @@
 			<button
 				class="rounded text-center text-large bg-green"
 				on:click={() =>
-					window.open('http://195.201.243.96:8100/#world_nether:0:0:0:1500:0:0:0:0:perspective')}
+					window.open('https://map.stemm1.org/#world_nether:0:0:0:1500:0:0:0:0:perspective')}
 				>Minecraft Nether</button
 			>
 		</div>
 		<div class="m-4">
 			<iframe
-				src="http://195.201.243.96:8100/#world_nether:0:0:0:1500:0:0:0:0:perspective"
+				src="https://map.stemm1.org/#world_nether:0:0:0:1500:0:0:0:0:perspective"
 				title="Nether"
 				class="enlargemc m-auto z-1000"
 				style="zoom: 500%"
@@ -66,13 +66,13 @@
 			<button
 				class="rounded text-center text-large bg-green"
 				on:click={() =>
-					window.open('http://195.201.243.96:8100/#world_the_end:0:0:0:1500:0:0:0:0:perspective')}
+					window.open('https://map.stemm1.org/#world_the_end:0:0:0:1500:0:0:0:0:perspective')}
 				>Minecraft End</button
 			>
 		</div>
 		<div class="m-4">
 			<iframe
-				src="http://195.201.243.96:8100/#world_the_end:0:0:0:1500:0:0:0:0:perspective"
+				src="https://map.stemm1.org/#world_the_end:0:0:0:1500:0:0:0:0:perspective"
 				title="End"
 				class="enlargemc m-auto z-1000"
 				style="zoom: 500%"
