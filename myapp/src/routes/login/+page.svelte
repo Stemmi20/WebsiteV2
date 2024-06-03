@@ -25,9 +25,9 @@
 		}
 
 		window.location.href = '/';
-		
-	if (method === 'Log-In') window.location.href = "/";
-		else window.location.href = "/registerpage"
+
+		if (method === 'Log-In') window.location.href = '/';
+		else window.location.href = '/register';
 	};
 </script>
 
@@ -46,7 +46,7 @@
 		<input
 			type="text"
 			name="username"
-			placeholder="Name"
+			placeholder="UserName"
 			class="text-center font-size-xl"
 			autocomplete="username"
 		/>
@@ -65,11 +65,11 @@
 				value="Log-In"
 				class="hover:scale-105 font-size-xl font-bold bg-gradient-to-r from-[#006EFF] via-[#16d410] to-[#006EFF] bg-[length:200%] p-2 px-6 rounded-xl transition-all bg-[position:0%_center] hover:bg-[position:100%_center] font-bold text-shadow-none disabled:opacity-50 disabled:cursor-not-allowed"
 			/>
-			<input
-				type="submit"
-				value="Register"
-				class="hover:scale-105 font-size-xl font-bold bg-gradient-to-r from-[#006EFF] via-[#16d410] to-[#006EFF] bg-[length:200%] p-2 px-6 rounded-xl transition-all bg-[position:0%_center] hover:bg-[position:100%_center] font-bold text-shadow-none disabled:opacity-50 disabled:cursor-not-allowed"
-			/>
 		</div>
 	</form>
+	<div class="flex flex-row justify-evenly items-center gap-5 mt-2">
+	<a
+		class="hover:scale-105 font-size-xl font-bold bg-gradient-to-r from-[#006EFF] via-[#16d410] to-[#006EFF] bg-[length:200%] p-2 px-6 rounded-xl transition-all bg-[position:0%_center] hover:bg-[position:100%_center] font-bold text-shadow-none disabled:opacity-50 disabled:cursor-not-allowed"
+		href="/register">Dont have an account? Register instead</a
+	></div>
 </div>

@@ -17,7 +17,7 @@ const saltRounds = 12;
 export const POST: RequestHandler = async (req) => {
 	const j = await req.request.json().catch(() => ({}));
 
-	const { password, username } = j;
+	const { password, username, firstname, lastname } = j;
 	if (!password || !username) return error(400, 'No password or username provided');
 
 	if(!checkPassword(password)) return error(400, 'Password is insecure');
@@ -27,7 +27,7 @@ export const POST: RequestHandler = async (req) => {
 
 	const hashed = await bcrypt.hash(password, saltRounds);
 	const user = await DataBase.users.create({
-		data: { username, password: hashed },
+		data: { username, password: hashed, firstname, lastname },
 		select: { id: true },
 	});
 
