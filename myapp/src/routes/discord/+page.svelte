@@ -9,6 +9,8 @@
         };
     </script>
 </div>
+<!--Discord member count-->
+<!-- https://discord.com/api/v10/invites/SR75j8RB3u?with_counts=true -->
 <div class="text-center text text-white m-auto w-50">
     <p>
         We are a small Discord Server. You can join our Server for Playing Games and makeing new Friends. We are playing a lot of diffrent Games Around here. Like Minecraft, Overwatch, Valorant and much more. Join us and Experience a friendly and open Discord Server. Of corse you should have fun. If you have any reports to do Please contact sTemm1 on the Server. He will solve the Problem with you and we hope you have a great time on the Server. 

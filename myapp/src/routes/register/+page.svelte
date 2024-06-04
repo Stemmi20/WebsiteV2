@@ -22,6 +22,10 @@
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(formJSON)
 		});
+		if (!res.ok) {
+			error=await res.json().then((r)=>r.message);
+			return;
+		}
 
 		window.location.href = '/';
 
