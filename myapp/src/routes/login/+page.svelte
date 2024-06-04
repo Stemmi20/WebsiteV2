@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { USERNAME } from "$env/static/private";
+
 	let form: HTMLFormElement;
 
 	let error: string;
