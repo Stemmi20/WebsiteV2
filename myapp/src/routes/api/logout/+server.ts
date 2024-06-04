@@ -8,6 +8,12 @@ export const POST: RequestHandler = async (req) => {
 		httpOnly: true,
 		secure: false,
 	});
+	req.cookies.delete('userid', {
+		path: '/',
+		sameSite: true,
+		httpOnly: true,
+		secure: false,
+	});
 
 	return json({ success: true });
 };

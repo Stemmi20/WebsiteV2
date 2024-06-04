@@ -20,6 +20,6 @@ export const POST: RequestHandler = async (req) =>  {
     console.log(firstname)
     console.log(lastname)
 
-    if (!lastname || !firstname) return json({href:"/registerpage"});
+    if (!lastname || !firstname) return json({href:"/register"});
         else return json({href:"/"})
 };
