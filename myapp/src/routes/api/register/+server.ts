@@ -18,7 +18,6 @@ export const POST: RequestHandler = async (req) => {
 	const j = await req.request.json().catch(() => ({}));
 
 	const { password, username, firstname, lastname } = j;
-	console.log(j)
 	if (!password || !username) return error(400, 'No password or username provided');
 	if (!firstname.length || !lastname.length) return error(400, 'First or Last name are Missing');
 	if(!checkPassword(password)) return error(400, 'Password is insecure! Password needs Uppercase, Lowercase, Number, Special caracters');
