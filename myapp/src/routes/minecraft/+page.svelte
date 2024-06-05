@@ -1,3 +1,9 @@
+<script lang="ts">
+	import type { PageServerData } from "./$types";
+
+	export let data:PageServerData;
+	console.log(data)
+</script>
 <div style="color: white;" class="contrast-NaN link_color">
 	<h1 class="text-center" style="margin: 0;">Minecraft</h1>
 	<br />
@@ -27,6 +33,9 @@
 	<h5 class="text-center">
 		We have some <a class="text-red" href="/minecraft/rules">Rules</a> that you have to follow.
 	</h5>
+	<div class="text-center">
+		🟢 Members Online on Server: {data.data.now}
+	</div>
 	<h5 class="text-center">Here you can see the map of our minecraft world.</h5>
 	<br />
 	<div class="text-center flex flex-col justify-center gap-4">
