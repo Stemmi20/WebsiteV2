@@ -12,7 +12,6 @@ export const load: PageServerLoad = async (event) => {
 };	
 
 async function initServerData() {
-    console.log('Data outdated, getting new')
     const url = 'https://mcapi.us/server/status?ip=mc.stemm1.org&port=25565';
     try {
         const response = await fetch(url);
