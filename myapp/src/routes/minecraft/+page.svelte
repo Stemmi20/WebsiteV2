@@ -2,7 +2,6 @@
 	import type { PageServerData } from "./$types";
 
 	export let data:PageServerData;
-	console.log(data)
 </script>
 <div style="color: white;" class="contrast-NaN link_color">
 	<h1 class="text-center" style="margin: 0;">Minecraft</h1>
