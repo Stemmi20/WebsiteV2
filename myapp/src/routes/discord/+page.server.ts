@@ -1,9 +1,14 @@
 import type { PageServerLoad } from '../$types.js';
 
+const tempData: {lastFetch: number, data: {approximate_member_count: number, approximate_presence_count: number}} = {lastFetch: 0, data: {approximate_member_count: 0, approximate_presence_count: 0}};
+
 export const load: PageServerLoad = async (event) => {
-    
-    const data = await fetchDCMembers();
-    return ({data});
+    const isTooOld = tempData.lastFetch < Date.now() - 600000;
+    if (isTooOld) {
+        tempData.data = await fetchDCMembers() as typeof tempData.data;
+        tempData.lastFetch = Date.now();
+    }
+    return {data: tempData.data};
 };	
 
 async function fetchDCMembers() {

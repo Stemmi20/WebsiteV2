@@ -4,7 +4,7 @@
 	export let data: PageServerData;
 </script>
 
-<div class="text-center flex justify-center m-10">
+<div class="text-center flex justify-center mt-10">
 	<button id="joindiscord" class="rounded bg-[rgb(114,137,218)] enlarge"
 		><img
 			class="max-w-200px max-h-250px"
@@ -19,14 +19,15 @@
 			win.focus();
 		};
 	</script>
+    <br>
+   
 </div>
-<div class="text-center text text-white m-auto W50">
-	<p>
-		Members on Server: {data.data.approximate_member_count} <br>
-		Members Online on Server: {data.data.approximate_presence_count}
-	</p>
-</div>
+
 <div class="text-center text text-white m-auto w-50">
+    <p class="mb-10">
+        Members on Server: {data.data.approximate_member_count} <br>
+        🟢 Members Online on Server: {data.data.approximate_presence_count}
+    </p>
 	<p>
 		We are a small Discord Server. You can join our Server for Playing Games and makeing new
 		Friends. We are playing a lot of diffrent Games Around here. Like Minecraft, Overwatch, Valorant
