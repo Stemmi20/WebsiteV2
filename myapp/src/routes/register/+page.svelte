@@ -33,7 +33,7 @@
 </script>
 
 {#if error.length}
-<div class="border-1px border-red p-2 border-solid w-fit m-auto mb-4">
+<div class="border-1px border-red p-2 border-solid w-fit m-auto mb-4 color-white">
 	{error}
 </div>
 {/if}
