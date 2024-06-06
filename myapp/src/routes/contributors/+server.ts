@@ -1,12 +1,11 @@
 import { json, error } from '@sveltejs/kit';
 import DataBase from '$lib/server/database.js';
 import type { RequestHandler } from './$types';
-import { url } from 'inspector';
 
 export const GET: RequestHandler = async (req) => {
 	const contribs = await DataBase.contributers.findMany();
-	const users = await DataBase.users.findMany({
-		where: { username: { in: contribs.map((c) => c.userid) } },
+	const users = await DataBase.contributers.findMany({
+		where: { userid: { in: contribs.map((c) => c.userid) } },
 		select: {
 			username: true,
 			avatar: true,
@@ -24,10 +23,10 @@ export const GET: RequestHandler = async (req) => {
 				...c,
 				username: user?.username,
 				avatar: user?.avatar,
-				socials: user?.socials.map((s, i) => ({
-					type.user?.socialstype[i],
-					url: s,
-				})),
+				// socials: user?.socials.map((s, i) => ({
+				// 	type.user?.socialstype[i],
+				// 	url: s,
+				// })),
 			};
 		})
 	);

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { url } from 'inspector';
 	import type { PageServerData } from './$types';
 
 	export let data: PageServerData;
