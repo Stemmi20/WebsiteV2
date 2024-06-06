@@ -27,7 +27,10 @@
 		<a href="/" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Home</a>
 		<a href="/minecraft" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Minecraft</a>
 		<a href="/discord" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Discord</a>
-		<a on:click={() => window.open('https://discord.gg/aV2RGPg7Yk')} class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Support</a>
+		<a
+			on:click={() => window.open('https://discord.gg/aV2RGPg7Yk')}
+			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Support</a
+		>
 	</div>
 	<div class="flex flex-row gap-3">
 		<a href="/profile" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Profile</a>
@@ -37,6 +40,7 @@
 			on:click={() => fetch('/api/logout', { method: 'POST' }).then(() => window.location.reload())}
 			>Logout</a
 		>
+		<a href="/creaters&credits" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Creaters & Credits</a>
 	</div>
 </div>
 <slot />

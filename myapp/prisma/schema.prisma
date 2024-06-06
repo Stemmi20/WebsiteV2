@@ -14,3 +14,11 @@ model users {
   firstname String? @db.Text
   lastname  String? @db.Text
 }
+
+model contributers {
+  username    String @db.Text
+  avatar      String @db.Text
+  socials     String @db.Text
+  socialstype String @db.Text
+  userid      String @id
+}
