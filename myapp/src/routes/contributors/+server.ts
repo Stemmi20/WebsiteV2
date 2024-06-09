@@ -1,4 +1,4 @@
-import { json, error } from '@sveltejs/kit';
+import { json } from '@sveltejs/kit';
 import DataBase from '$lib/server/database.js';
 import type { RequestHandler } from './$types';
 
@@ -17,16 +17,16 @@ export const GET: RequestHandler = async (req) => {
 
 	return json(
 		contribs.map((c) => {
-			const user = users.find((u) => u.username === c.username);
+			const user = contribs.find((u) => u.username === c.username);
 
 			return{
 				...c,
 				username: user?.username,
 				avatar: user?.avatar,
-				// socials: user?.socials.map((s, i) => ({
-				// 	type.user?.socialstype[i],
-				// 	url: s,
-				// })),
+				socials: user?.socials.map((s, i) => ({
+					type.user?.socialstype[i],
+					url: s,
+				})),
 			};
 		})
 	);

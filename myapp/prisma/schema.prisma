@@ -18,7 +18,21 @@ model users {
 model contributers {
   username    String @db.Text
   avatar      String @db.Text
-  socials     String @db.Text
+  socials     socials[]
   socialstype String @db.Text
   userid      String @id
+}
+
+model socials {
+  PayPal
+  Reddit
+  TikTok
+  X
+  eBay
+  Crunchyroll
+  PlayStation Network
+  Xbox
+  Bungie.net
+  Facebook
+  GitHub
 }
