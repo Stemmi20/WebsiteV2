@@ -4,7 +4,7 @@ import type { RequestHandler } from './$types';
 
 export const GET: RequestHandler = async (req) => {
 	const users = await DataBase.contributers.findMany({
-		include: {socials:true}
+		include: {socials:true,support:true}
 	}); 
 	return json(
 		users

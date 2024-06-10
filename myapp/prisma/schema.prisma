@@ -16,10 +16,11 @@ model users {
 }
 
 model contributers {
-  userid      String    @id
-  username    String    @db.Text
-  avatar      String    @db.Text
-  socials     socials[]
+  userid   String    @id
+  username String    @db.Text
+  avatar   String    @db.Text
+  socials  socials[]
+  support  support[]
 }
 
 enum SocialsType {
@@ -46,11 +47,27 @@ enum SocialsType {
   PlayStationNetwork
 }
 
+
+enum supportType {
+  Website_Creater
+  Website_Helper
+}
+
 model socials {
   userid String
   User   contributers @relation(fields: [userid], references: [userid])
 
   type  SocialsType
+  value String
+
+  @@id([userid, type])
+}
+
+model support {
+  userid String
+  User   contributers @relation(fields: [userid], references: [userid])
+
+  type supportType
   value String
 
   @@id([userid, type])
