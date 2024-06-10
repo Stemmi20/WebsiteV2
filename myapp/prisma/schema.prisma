@@ -16,23 +16,41 @@ model users {
 }
 
 model contributers {
-  username    String @db.Text
-  avatar      String @db.Text
+  userid      String    @id
+  username    String    @db.Text
+  avatar      String    @db.Text
   socials     socials[]
-  socialstype String @db.Text
-  userid      String @id
 }
 
-model socials {
+enum SocialsType {
+  GitHub
   PayPal
   Reddit
   TikTok
   X
   eBay
   Crunchyroll
-  PlayStation Network
   Xbox
-  Bungie.net
   Facebook
-  GitHub
+  YouTube
+  Steam
+  Spotify
+  Domain
+  Twitch
+  EpicGames
+  Battlenet
+  RiotGames
+  LeagueofLegends
+  Bungienet
+  PlayStationNetwork
+}
+
+model socials {
+  userid String
+  User   contributers @relation(fields: [userid], references: [userid])
+
+  type  SocialsType
+  value String
+
+  @@id([userid, type])
 }
