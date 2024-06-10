@@ -36,6 +36,5 @@ export const POST: RequestHandler = async (req) => {
 		expires: new Date(Date.now() + 1000 * 60 * 60 * 24),
 	});
 
-	console.log(username);
 	return json({ success: true });
 };

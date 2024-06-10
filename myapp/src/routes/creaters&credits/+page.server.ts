@@ -48,7 +48,6 @@ async function discordUserSocialsfetch(event: ServerLoadEvent<RouteParams, {}, "
             throw new Error(`Error frtching WRC quote: ${response.statusText}`);
         }
         const data: { id: number; socials: string }[] = await response.json();
-        console.log( data)
         return data;
     } catch (error) {
         console.error('Error:', error);

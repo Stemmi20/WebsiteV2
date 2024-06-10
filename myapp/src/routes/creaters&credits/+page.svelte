@@ -15,10 +15,13 @@
 				/>
 
 				<div class="mt-2 gap-2 flex flex-row">
-					{#each (data.datasocials.filter((s) => s.userid === u.id).map((s) => s.socials).flat() as any) ?? [] as s}
+					{#each (data.datasocials.filter((s) => s.userid === u.id).map((s) => s.socials).flat()) ?? [] as s}
 						<a target="_blank" href={s.value}>
 							{s.type}
 						</a>
+					{/each}
+					{#each (data.datasocials.filter((s) => s.userid === u.id).map((s) => s.support).flat()) ?? [] as s}
+						
 					{/each}
 				</div>
 			</div>

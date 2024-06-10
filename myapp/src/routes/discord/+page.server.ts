@@ -22,7 +22,6 @@ async function fetchDCMembers() {
         const data: { approximate_member_count: number; approximate_presence_count: number } =
             await response.json();
 
-        console.log(data.approximate_member_count, data.approximate_presence_count);
         return data;
     } catch (error) {
         console.error('Error:', error);
