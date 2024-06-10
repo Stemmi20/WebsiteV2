@@ -9,12 +9,12 @@
 		{#each data.datausers as u}
 			<div class="flex flex-col items-center gap-2">
 				{u.global_name}
-				<img
+				<img alt=""
 					src="https://cdn.discordapp.com/avatars/{u.id}/{u.avatar}.webp"
 					class="w-40 rounded-full"
 				/>
 
-				<div class="mt-2">
+				<div class="mt-2 gap-2 flex flex-row">
 					{#each (data.datasocials.filter((s) => s.userid === u.id).map((s) => s.socials).flat() as any) ?? [] as s}
 						<a target="_blank" href={s.value}>
 							{s.type}
