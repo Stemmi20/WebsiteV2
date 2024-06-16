@@ -1,13 +1,13 @@
 import type { PageServerLoad, RouteParams } from './$types.js';
 import { TOKEN } from '$env/static/private';
 import type { ServerLoadEvent } from '@sveltejs/kit';
-import type { socials } from '@prisma/client';
+import type { socials, support } from '@prisma/client';
 
 const token = TOKEN
 const ids: string[] = ['860442201262915594', '318453143476371456'];
 
 const tempDatausers: {lastFetch: number, data: {id: string, global_name: string, avatar: string}[]} = {lastFetch: 0, data: []};
-const tempDatasocials: {lastFetch: number, data: {userid: string, socials: socials[]}[]} = {lastFetch: 0, data: []};
+const tempDatasocials: {lastFetch: number, data: {userid: string, socials: socials[], support: support[]}[]} = {lastFetch: 0, data: []};
 
 export const load: PageServerLoad = async (event) => {
     const isTooOld = tempDatausers.lastFetch < Date.now() - 600000;

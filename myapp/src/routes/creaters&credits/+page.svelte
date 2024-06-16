@@ -14,14 +14,18 @@
 					class="w-40 rounded-full"
 				/>
 
-				<div class="mt-2 gap-2 flex flex-row">
+				<div class="flex flex-row gap-2">
 					{#each (data.datasocials.filter((s) => s.userid === u.id).map((s) => s.socials).flat()) ?? [] as s}
 						<a target="_blank" href={s.value}>
 							{s.type}
 						</a>
 					{/each}
+				</div>
+				<div class="flex flex-col gap-2 bg-green-500 rounded-full w-110% h-10">
 					{#each (data.datasocials.filter((s) => s.userid === u.id).map((s) => s.support).flat()) ?? [] as s}
-						
+						<a target="_blank">
+							{s.type}
+						</a>
 					{/each}
 				</div>
 			</div>
