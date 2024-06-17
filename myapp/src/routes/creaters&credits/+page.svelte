@@ -23,9 +23,9 @@
 				</div>
 				<div class="flex flex-col gap-2 bg-green-500 rounded-full w-110% h-10">
 					{#each (data.datasocials.filter((s) => s.userid === u.id).map((s) => s.support).flat()) ?? [] as s}
-						<a target="_blank">
+						<div>
 							{s.type}
-						</a>
+						</div>
 					{/each}
 				</div>
 			</div>
