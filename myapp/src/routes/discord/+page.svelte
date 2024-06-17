@@ -24,9 +24,9 @@
 </div>
 
 <div class="text-center text text-white m-auto w-50">
-    <div class="mb-10">
+    <div class="color-fuchsia-500 mb-10 font-size-5">
         Members on Server: {data.data.approximate_member_count} <br>
-        🟢 Members Online on Server: {data.data.approximate_presence_count}
+        🟢 Members Online: {data.data.approximate_presence_count}
     </div>
 	<div>
 		We are a small Discord Server. You can join our Server for Playing Games and makeing new
