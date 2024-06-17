@@ -1,5 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
+
+	const excludeOn = ['/minecraft'];
+	$: show = !excludeOn.includes($page.url.pathname);
 
 	let blobSlow: HTMLDivElement;
 	let blobFast: HTMLDivElement;
@@ -8,7 +12,7 @@
 	$: y = 0;
 	let lastUpdate = Date.now();
 
-	onMount(() => {
+	$: {
 		[blobSlow, blobFast].forEach((b) => {
 			b?.animate([{ opacity: `0%` }, { opacity: `50%` }], {
 				duration: 3000,
@@ -16,7 +20,7 @@
 				fill: 'forwards'
 			});
 		});
-	});
+	}
 </script>
 
 <div
@@ -40,7 +44,9 @@
 			on:click={() => fetch('/api/logout', { method: 'POST' }).then(() => window.location.reload())}
 			>Logout</a
 		>
-		<a href="/creaters&credits" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Creaters & Credits</a>
+		<a href="/creaters&credits" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
+			>Creaters & Credits</a
+		>
 	</div>
 </div>
 <slot />
@@ -53,18 +59,21 @@
 		}
 	}}
 />
-<div
-	class="pointer-events-none fixed -z-100 min-w-100 min-h-100 op-0 -ml-50 -mt-50 blur-100 bg-gradient-to-r from-[rgb(243,69,214)] to-[rgb(33,102,187)] rounded-full"
-	style="left: {x}px; top: {y}px;"
-	id="rotate"
-	bind:this={blobSlow}
-></div>
-<div
-	class="pointer-events-none fixed -z-100 min-w-100 min-h-100 op-0 -ml-50 -mt-50 blur-100 bg-gradient-to-r from-[rgb(243,69,214)] to-[rgb(33,102,187)] rounded-full"
-	style="left: {x}px; top: {y}px;"
-	id="rotateFaster"
-	bind:this={blobFast}
-></div>
+
+{#if show}
+	<div
+		class="pointer-events-none fixed -z-100 min-w-100 min-h-100 op-0 -ml-50 -mt-50 blur-100 bg-gradient-to-r from-[rgb(243,69,214)] to-[rgb(33,102,187)] rounded-full"
+		style="left: {x}px; top: {y}px;"
+		id="rotate"
+		bind:this={blobSlow}
+	></div>
+	<div
+		class="pointer-events-none fixed -z-100 min-w-100 min-h-100 op-0 -ml-50 -mt-50 blur-100 bg-gradient-to-r from-[rgb(243,69,214)] to-[rgb(33,102,187)] rounded-full"
+		style="left: {x}px; top: {y}px;"
+		id="rotateFaster"
+		bind:this={blobFast}
+	></div>
+{/if}
 
 <style scoped>
 	#rotate {
