@@ -19,20 +19,19 @@
 			win.focus();
 		};
 	</script>
-    <br>
-   
+	<br />
 </div>
 
 <div class="text-center text text-white m-auto w-50">
-    <div class="mb-10 font-size-5">
-        Members on Server: {data.data.approximate_member_count} <br>
-        🟢 Members Online: {data.data.approximate_presence_count}
-    </div>
+	<div class="mb-10 font-size-5">
+		Members on Server: {data.data.approximate_member_count} <br />
+		🟢 Members Online: {data.data.approximate_presence_count}
+	</div>
 	<div>
-		We are a small Discord Server. You can join our Server for Playing Games and makeing new
-		Friends. We are playing a lot of diffrent Games Around here. Like Minecraft, Overwatch, Valorant
-		and much more. Join us and Experience a friendly and open Discord Server. Of corse you should
-		have fun. If you have any reports to do Please contact sTemm1 on the Server. He will solve the
-		Problem with you and we hope you have a great time on the Server.
+		We are a small Discord server where you can join us to play games and make new friends. We play
+		a variety of games such as Minecraft, Overwatch, Valorant, and many more. Join us to experience
+		a friendly and open community. Of course, having fun is our main goal. If you have any issues,
+		please contact sTemm1 on the server. They will work with you to resolve the problem. We hope you
+		have a great time on our server!
 	</div>
 </div>
