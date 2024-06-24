@@ -6,7 +6,7 @@
 	let error: string;
 	$: error = '';
 
-	import type { PageServerData } from '../$types';
+	import type { PageServerData } from './$types';
 
 	export let data: PageServerData;
 
