@@ -14,7 +14,7 @@
 
 		opened = true;
 
-		sidebar.animate([{ left: `-${sidebar.offsetWidth}px` }, { left: '0' }], {
+		sidebar?.animate([{ left: `-${sidebar.offsetWidth}px` }, { left: '0' }], {
 			duration: 300,
 			easing: 'ease-in-out',
 			fill: 'forwards'
@@ -26,7 +26,7 @@
 
 		document.documentElement.style.overflowY = 'scroll';
 
-		sidebar.animate([{ left: '0' }, { left: `-${sidebar.offsetWidth}px` }], {
+		sidebar?.animate([{ left: '0' }, { left: `-${sidebar.offsetWidth}px` }], {
 			duration: 300,
 			easing: 'ease-in-out',
 			fill: 'forwards'

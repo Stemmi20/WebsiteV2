@@ -15,7 +15,7 @@
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Support</a
 		>
 	</div>
-	<div class="flex {width > 700 ? 'flex-row' : 'flex-col'} gap-3 mt-10 items-center">
+	<div class="flex {width > 700 ? 'flex-row' : 'flex-col mt-10 items-center'} gap-3 ">
 		<a href="/profile" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge">Profile</a>
 		<a
 			href="/login"

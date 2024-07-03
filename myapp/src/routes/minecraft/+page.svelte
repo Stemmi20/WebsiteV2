@@ -46,12 +46,13 @@
 				>Minecraft Overworld</button
 			>
 		</div>
-		<div class="m-4">
+		<div class="m-4 ">
 			<iframe
 				src="https://map.stemm1.org/#world:0:0:0:1500:0:0:0:0:perspective"
 				title="World"
 				class="enlargemc m-auto z-1000"
 				style="zoom: 500%"
+				width="90%"
 			></iframe>
 		</div>
 		<div class="enlarge">
@@ -68,6 +69,7 @@
 				title="Nether"
 				class="enlargemc m-auto z-1000"
 				style="zoom: 500%"
+				width="90%"
 			></iframe>
 		</div>
 		<div class="enlarge">
@@ -84,6 +86,7 @@
 				title="End"
 				class="enlargemc m-auto z-1000"
 				style="zoom: 500%"
+				width="90%"
 			></iframe>
 		</div>
 	</div>
