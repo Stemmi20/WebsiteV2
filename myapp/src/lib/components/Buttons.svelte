@@ -1,5 +1,7 @@
 <script lang="ts">
 	$: width = 0;
+
+	export let close: Function;
 </script>
 
 <div

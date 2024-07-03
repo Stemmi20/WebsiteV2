@@ -58,7 +58,7 @@ hover:bg-[#fe3521] hover:color-white"
 			<Fa icon={faX} size="1.5x" />
 		</button>
         </div>
-		<div class="px-4 flex flex-col"><Buttons /></div>
+		<div class="px-4 flex flex-col"><Buttons {close} /></div>
 	{/if}
 </nav>
 
