@@ -10,7 +10,7 @@
 
 	export let data: PageServerData;
 
-	const submit = async (e: SubmitEvent & { currentTarget: EventTarget & HTMLFormElement }) => {
+	const submitregister = async (e: SubmitEvent & { currentTarget: EventTarget & HTMLFormElement }) => {
 		e.preventDefault();
 
 		const formData = new FormData(form, e.submitter);
@@ -40,7 +40,7 @@
 
 <form
 	class="flex flex-col justify-center items-center text-center gap-2"
-	on:submit={submit}
+	on:submit={submitregister}
 	bind:this={form}
 >
 	<div class="flex flex-row">

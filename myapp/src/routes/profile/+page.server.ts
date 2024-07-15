@@ -1,5 +1,5 @@
 import DataBase from '$lib/server/database';
-import type { PageServerLoad } from './$types.js';
+import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async (event) => {
    const username = await DataBase.users.findUnique({ where: { id: Number(event.cookies.get('userid')) }, select: { username: true } })
