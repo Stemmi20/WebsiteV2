@@ -1,5 +1,9 @@
 <script lang="ts">
 	$: width = 0;
+
+	import type { PageServerData } from './$types';
+
+	export let data: PageServerData;
 </script>
 
 <div class="flex justify-center items-center text-left">
@@ -11,6 +15,26 @@
 				alt=""
 			/></a
 		>
+		<div class="flex flex-col items-start">
+			<div class="m-4">
+				<iframe
+					src="https://map.stemm1.org/#world:0:0:0:1500:0:0:0:0:perspective"
+					title="World"
+					class="enlargemc m-auto z-1000"
+					style="zoom: 200%"
+					width="75%"
+				></iframe>
+			</div>
+			<div class="m-4">
+				<iframe
+					src="https://map.stemm1.org/#world_nether:0:0:0:1500:0:0:0:0:perspective"
+					title="World"
+					class="enlargemc m-auto z-1000"
+					style="zoom: 200%"
+					width="75%"
+				></iframe>
+			</div>
+		</div>
 
 		<a on:click={() => (location.href = 'discord')}
 			><img
@@ -19,5 +43,11 @@
 				alt=""
 			/></a
 		>
+		<div class="flex flex-col items-end color-white">
+			<div class="mb-10 font-size-5">
+				Members on Server: {data.data.approximate_member_count} <br />
+				🟢 Members Online: {data.data.approximate_presence_count}
+			</div>
+		</div>
 	</div>
 </div>
