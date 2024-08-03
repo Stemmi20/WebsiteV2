@@ -33,11 +33,11 @@
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
 			on:click={() => close()}>Plugin</a
 		>
-		<a
+		<!-- <a
 			href="/browserGame"
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
 			on:click={() => close()}>Game</a
-		>
+		> -->
 		<a
 			on:click={() => window.open('https://discord.gg/aV2RGPg7Yk')}
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
