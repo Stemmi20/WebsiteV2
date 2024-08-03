@@ -111,11 +111,11 @@
 			context = this.canvas.getContext('2d') as CanvasRenderingContext2D;
 			document.body.insertBefore(this.canvas, document.body.childNodes[0]);
 			frameNo = 0;
-			interval = setInterval(updateGameArea, 20);
+			Number(setInterval(updateGameArea, 20));
 		},
 		clear() {
 			if (context) {
-				context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+				context.clearRect(0, 0, this.canvas?.width, this.canvas?.height);
 			} else {
 				console.error('Canvas context is null');
 			}
@@ -125,7 +125,7 @@
 	function updateGameArea() {
 		for (let i = 0; i < myObstacles.length; i += 1) {
 			if (myGamePiece.crashWith(myObstacles[i])) {
-				return;
+				return; 
 			}
 		}
 	}
@@ -139,7 +139,7 @@
 	}
 
 	onMount(() => {
-		startGame();
+		startGame()
 	});
 </script>
 
