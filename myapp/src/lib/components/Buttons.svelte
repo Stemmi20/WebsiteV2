@@ -33,6 +33,11 @@
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
 			on:click={() => close()}>Plugin</a
 		>
+		<a
+			href="/grafana"
+			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
+			on:click={() => close()}>Grafana</a
+		>
 		<!-- <a
 			href="/browserGame"
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
