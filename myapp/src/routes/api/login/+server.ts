@@ -31,7 +31,7 @@ export const POST: RequestHandler = async (req) => {
 	req.cookies.set('userid', String(user.id) , {
 		path: '/',
 		sameSite: true,
-		httpOnly: true,
+		httpOnly: false,
 		secure: false,
 		expires: new Date(Date.now() + 1000 * 60 * 60 * 24),
 	});

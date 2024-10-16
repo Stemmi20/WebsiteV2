@@ -1,7 +1,16 @@
 <script lang="ts">
+	import Cookies from "js-cookie";
+	import { onMount } from "svelte";
 	$: width = 0;
 
 	export let close: Function;
+	let login = "Login"
+
+	onMount(() => {
+	 if (Cookies.get("userid")) login = "Logout";
+	 console.log(Cookies.get('userid'))
+	})
+
 </script>
 
 <div
@@ -62,7 +71,7 @@
 			href="/login"
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
 			on:click={() => fetch('/api/logout', { method: 'POST' }).then(() => window.location.reload())}
-			on:click={() => close()}>Logout</a
+			on:click={() => close()}>{login}</a
 		>
 		<a
 			href="/creaters&credits"

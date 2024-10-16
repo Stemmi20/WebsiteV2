@@ -1,6 +1,9 @@
 <div>
-	<iframe title="" src="http://localhost:3000/public-dashboards/7b08a03a7b594dfbb0c3c4b5eecfdf86" width="800" height="800"></iframe>
-	<img
+	<iframe title="" src="https://grafana.stemm1.org/d/rYdddlPWk/node-exporter-full?orgId=1&refresh=1m" width="800" height="800"></iframe>
+	<!-- <iframe title="" src="http://localhost:3000/dashboard/snapshot/RnFjhTa3mqMbePUqrtGvGX7fmwOWFLmi" width="800" height="800"></iframe> -->
+	<!-- <iframe title="" src="http://localhost:3000/public-dashboards/7b08a03a7b594dfbb0c3c4b5eecfdf86" width="800" height="800"></iframe> -->
+	<!-- <iframe title="" src="http://localhost:3000/public-dashboards/7b08a03a7b594dfbb0c3c4b5eecfdf86" width="800" height="800"></iframe> -->
+	<!-- <img
 		src="https://grafana.stemm1.org/d/rYdddlPWk/node-exporter-full?orgId=1&refresh=1m&from=1725956416520&to=1726042816520"
 		alt="Grfana Dashboard"
 	/>
@@ -14,5 +17,5 @@
 		src="http://localhost:3000/dashboard/snapshot/V4HoDPc5vT9aoAnhLswKvpFVuarTlW7U"
 		width="800"
 		height="800"
-	></iframe>
+	></iframe> -->
 </div>

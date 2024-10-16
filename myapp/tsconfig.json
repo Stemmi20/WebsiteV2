@@ -24,8 +24,9 @@
 		"src/**/*.d.ts",
 		"src/**/*.tsx",
 		"src/**/*.vue",
+		"src/**/*.svelte",
 		"src/env.tsv.tssrc/env.tsc/env.ts",
-  ".svelte-kit/ambient.d.ts"
+		".svelte-kit/ambient.d.ts"
 	],
 	"references": [{ "path": "./tsconfig.node.json" }]
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
