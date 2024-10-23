@@ -9,5 +9,6 @@ export const load: PageServerLoad = async (event) => {
 	const serverLoad = await DataBase.serverLoad.findMany({
 		where: {timestamp: {gt: new Date(Date.now() - 900000)}}
 	});
+
 	return {serverLoad}
 };

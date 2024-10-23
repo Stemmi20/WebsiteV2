@@ -26,12 +26,12 @@
 	$: width = 0;
 </script>
 
-{#if width > 700}
+<!-- {#if width > 700}
 	<Buttons />	
 {/if}
 {#if width < 700}
 	<Sidebar />	
-{/if}
+{/if} -->
 
 <slot />
 <svelte:window
