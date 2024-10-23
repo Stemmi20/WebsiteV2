@@ -43,7 +43,7 @@ model support {
 
 model serverLoad {
   id        Int      @id @default(autoincrement())
-  timestamp DateTime @db.Timestamp(6)
+  timestamp Decimal  @db.Decimal
   cpuLoad   Int
   ramLoad   Int
 }

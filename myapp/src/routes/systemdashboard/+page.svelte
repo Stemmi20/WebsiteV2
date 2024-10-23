@@ -29,7 +29,7 @@
 		new Chart(document.getElementById('CPU') as HTMLCanvasElement, {
 			type: 'line',
 			data: {
-				labels: data.serverLoad.map((d) => new Date(d.timestamp).toLocaleTimeString()),
+				labels: data.serverLoad.map((d) => new Date(Number(d.timestamp)).toLocaleTimeString()),
 				datasets: [data.serverLoad.map((d) => d.cpuLoad / 10)].map((d) => ({
 					borderColor: 'red',
 					label: 'CPU',
@@ -69,7 +69,7 @@
 		new Chart(document.getElementById('RAM') as HTMLCanvasElement, {
 			type: 'line',
 			data: {
-				labels: data.serverLoad.map((d) => new Date(d.timestamp).toLocaleTimeString()),
+				labels: data.serverLoad.map((d) => new Date(Number(d.timestamp)).toLocaleTimeString()),
 				datasets: [data.serverLoad.map((d) => d.ramLoad / 1000)].map((d) => ({
 					borderColor: 'blue',
 					label: 'RAM',
