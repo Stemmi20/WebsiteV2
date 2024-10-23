@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import Buttons from '$lib/components/Buttons.svelte'
-	import Sidebar from '$lib/components/Sidebar.svelte'
+	import Buttons from '$lib/components/Buttons.svelte';
+	import Sidebar from '$lib/components/Sidebar.svelte';
 
 	const excludeOn = ['/minecraft'];
 	$: show = !excludeOn.includes($page.url.pathname);
@@ -18,7 +18,7 @@
 			b?.animate([{ opacity: `0%` }, { opacity: `50%` }], {
 				duration: 3000,
 				delay: 1000,
-				fill: 'forwards'
+				fill: 'forwards',
 			});
 		});
 	}
@@ -26,12 +26,12 @@
 	$: width = 0;
 </script>
 
-<!-- {#if width > 700}
-	<Buttons />	
+{#if width > 700}
+	<Buttons close={() => {}} />
 {/if}
 {#if width < 700}
-	<Sidebar />	
-{/if} -->
+	<Sidebar />
+{/if}
 
 <slot />
 <svelte:window
