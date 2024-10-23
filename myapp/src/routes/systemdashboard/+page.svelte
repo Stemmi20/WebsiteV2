@@ -47,7 +47,7 @@
 						},
 						stacked: true,
 						title: {
-							color: "white",
+							color: 'white',
 							display: true,
 							text: 'Date',
 						},
@@ -58,7 +58,7 @@
 						},
 						stacked: true,
 						title: {
-							color: "white",
+							color: 'white',
 							display: true,
 							text: '%',
 						},
@@ -87,6 +87,7 @@
 						},
 						stacked: true,
 						title: {
+							color: 'white',
 							display: true,
 							text: 'Date',
 						},
@@ -97,6 +98,7 @@
 						},
 						stacked: true,
 						title: {
+							color: 'white',
 							display: true,
 							text: 'GB',
 						},
