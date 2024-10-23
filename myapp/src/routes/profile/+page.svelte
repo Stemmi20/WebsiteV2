@@ -10,7 +10,7 @@
 	$: error = '';
 
 	const submitpasswordchange = async (
-		e: SubmitEvent & { currentTarget: EventTarget & HTMLFormElement }
+		e: SubmitEvent & { currentTarget: Event & HTMLFormElement }
 	) => {
 		const formData = new FormData(form, e.submitter);
 		const formJSON: { [key: string]: string } = {};

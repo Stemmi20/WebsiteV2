@@ -9,18 +9,43 @@ datasource db {
 
 model users {
   id        Int     @id @default(autoincrement())
-  username  String  @db.Text
-  password  String  @db.Text
-  firstname String? @db.Text
-  lastname  String? @db.Text
+  username  String
+  password  String
+  firstname String?
+  lastname  String?
 }
 
 model contributers {
   userid   String    @id
-  username String    @db.Text
-  avatar   String    @db.Text
+  username String
+  avatar   String
   socials  socials[]
   support  support[]
+}
+
+model socials {
+  userid String
+  type   SocialsType
+  value  String
+  User   contributers @relation(fields: [userid], references: [userid])
+
+  @@id([userid, type])
+}
+
+model support {
+  userid String
+  type   supportType
+  value  String
+  User   contributers @relation(fields: [userid], references: [userid])
+
+  @@id([userid, type])
+}
+
+model serverLoad {
+  id        Int      @id @default(autoincrement())
+  timestamp DateTime @db.Timestamp(6)
+  cpuLoad   Int
+  ramLoad   Int
 }
 
 enum SocialsType {
@@ -47,28 +72,7 @@ enum SocialsType {
   PlayStationNetwork
 }
 
-
 enum supportType {
   Website_Creater
   Website_Helper
-}
-
-model socials {
-  userid String
-  User   contributers @relation(fields: [userid], references: [userid])
-
-  type  SocialsType
-  value String
-
-  @@id([userid, type])
-}
-
-model support {
-  userid String
-  User   contributers @relation(fields: [userid], references: [userid])
-
-  type supportType
-  value String
-
-  @@id([userid, type])
 }

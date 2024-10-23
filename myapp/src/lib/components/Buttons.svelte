@@ -43,9 +43,9 @@
 			on:click={() => close()}>Plugin</a
 		>
 		<a
-			href="/grafana"
+			href="/systemdashboard"
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
-			on:click={() => close()}>Grafana</a
+			on:click={() => close()}>System Dashboard</a
 		>
 		<a
 			href="/browserGame"

@@ -31,7 +31,10 @@
 	};
 </script>
 
-<div class="pt-20">
+<div class="color-white flex flex-center justify-center mt-10 font-size-5">
+	Log in or Register to get full accces.
+</div>
+<div class="pt-15">
 	{#if error.length}
 		<div class="border-1px border-red p-2 border-solid w-fit m-auto mb-4 color-white">
 			{error}
