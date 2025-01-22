@@ -1,16 +1,15 @@
 <script lang="ts">
-	import Cookies from "js-cookie";
-	import { onMount } from "svelte";
+	import Cookies from 'js-cookie';
+	import { onMount } from 'svelte';
 	$: width = 0;
 
 	export let close: Function;
-	let login = "Login"
+	let login = 'Login';
 
 	onMount(() => {
-	 if (Cookies.get("userid")) login = "Logout";
-	 console.log(Cookies.get('userid'))
-	})
-
+		if (Cookies.get('userid')) login = 'Logout';
+		console.log(Cookies.get('userid'));
+	});
 </script>
 
 <div
@@ -42,20 +41,18 @@
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
 			on:click={() => close()}>Plugin</a
 		>
-		<a
+		<!-- <a
 			href="/systemdashboard"
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
 			on:click={() => close()}>System Dashboard</a
-		>
+		> -->
 		<a
 			href="/browserGame"
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
 			on:click={() => close()}>Game</a
 		>
-		<a
-			href="/task"
-			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
-			on:click={() => close()}>Task</a
+		<a href="/task" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge" on:click={() => close()}
+			>Task</a
 		>
 		<a
 			on:click={() => window.open('https://discord.gg/aV2RGPg7Yk')}
