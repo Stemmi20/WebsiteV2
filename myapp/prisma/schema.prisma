@@ -7,12 +7,27 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model task {
+  id     Int    @id @default(autoincrement())
+  userid Int
+  name   String
+  xp     Int
+}
+
+model progress {
+  id              Int @id
+  currentprogress Int
+  level           Int
+}
+
 model users {
-  id        Int     @id @default(autoincrement())
-  username  String
-  password  String
-  firstname String?
-  lastname  String?
+  id             Int     @id @default(autoincrement())
+  username       String
+  password       String
+  firstname      String?
+  lastname       String?
+  leaderboard    Boolean @default(false)
+  taskscompleted Int     @default(0)
 }
 
 model contributers {
@@ -42,8 +57,8 @@ model support {
 }
 
 model serverLoad {
-  id        Int      @id @default(autoincrement())
-  timestamp Decimal  @db.Decimal
+  id        Int     @id @default(autoincrement())
+  timestamp Decimal @db.Decimal
   cpuLoad   Int
   ramLoad   Int
 }

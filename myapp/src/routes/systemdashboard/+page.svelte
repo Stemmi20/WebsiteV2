@@ -107,6 +107,12 @@
 			},
 		});
 	});
+
+	onMount(() => {
+		setTimeout(() => {
+			window.location.reload();
+		}, 30000);
+	});
 </script>
 
 <div>

@@ -7,7 +7,7 @@ export const load: PageServerLoad = async (event) => {
 	if (!token) return redirect(307, '/login');
 
 	const serverLoad = await DataBase.serverLoad.findMany({
-		where: { timestamp: { gt: Date.now() - 900000 } },
+		where: { timestamp: { gt: Date.now() - 1800000 } },
 	});
 
 	return { serverLoad: serverLoad.map((s) => ({ ...s, timestamp: Number(s.timestamp) })) };

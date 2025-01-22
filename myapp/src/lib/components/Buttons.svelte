@@ -47,14 +47,16 @@
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
 			on:click={() => close()}>System Dashboard</a
 		>
-		<!-- <a
+		<a
 			href="/browserGame"
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
 			on:click={() => close()}>Game</a
-		> -->
-		<!-- svelte-ignore a11y_click_events_have_key_events -->
-		<!-- svelte-ignore a11y_no_static_element_interactions -->
-		<!-- svelte-ignore a11y_missing_attribute -->
+		>
+		<a
+			href="/task"
+			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
+			on:click={() => close()}>Task</a
+		>
 		<a
 			on:click={() => window.open('https://discord.gg/aV2RGPg7Yk')}
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"
