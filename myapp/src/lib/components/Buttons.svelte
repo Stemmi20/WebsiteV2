@@ -22,7 +22,7 @@
 	<div
 		class="flex {width > 700
 			? 'flex-row'
-			: 'flex-col'} justify-center justify-start items-center gap-3 text-white"
+			: 'flex-col'} justify-center justify-start items-center gap-4 text-white"
 	>
 		<a href="/" class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge" on:click={() => close()}
 			>Home</a
@@ -63,7 +63,7 @@
 			on:click={() => close()}>Support</a
 		>
 	</div>
-	<div class="flex {width > 700 ? 'flex-row' : 'flex-col mt-10 items-center'} gap-3">
+	<div class="flex {width > 700 ? 'flex-row' : 'flex-col mt-10 items-center'} gap-4">
 		<a
 			href="/profile"
 			class="bg-[#0074f8] px-8px py-4px border-rd-8px enlarge"

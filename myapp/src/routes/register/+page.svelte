@@ -50,7 +50,7 @@
 					type="text"
 					name="username"
 					placeholder="User Name"
-					class="text-center font-size-xl"
+					class="text-center font-size-xl rounded-lg p-2"
 					autocomplete="username"
 				/>
 			</div>
@@ -59,7 +59,7 @@
 					type="password"
 					name="password"
 					placeholder="Password"
-					class="text-center font-size-xl"
+					class="text-center font-size-xl rounded-lg p-2"
 					autocomplete="current-password"
 				/>
 			</div>
@@ -69,7 +69,7 @@
 					type="text"
 					name="firstname"
 					placeholder="First Name: "
-					class="text-center font-size-xl"
+					class="text-center font-size-xl rounded-lg p-2"
 					autocomplete="username"
 				/>
 			</div>
@@ -79,7 +79,7 @@
 					type="text"
 					name="lastname"
 					placeholder="Last Name: "
-					class="text-center font-size-xl"
+					class="text-center font-size-xl rounded-lg p-2"
 					autocomplete="username"
 				/>
 			</div>

@@ -12,35 +12,19 @@
 			><img
 				class="of-hidden enlarge max-w-450px max-h-250px"
 				src="/join_minecraft_serverjpg.jpg"
-				alt=""
+				alt="Play Minecraft with us"
 			/></a
 		>
-		<div class="flex flex-col items-start">
-			<div class="m-4">
-				<iframe
-					src="https://map.stemm1.org/#world:0:0:0:1500:0:0:0:0:perspective"
-					title="World"
-					class="enlargemc m-auto z-1000"
-					style="zoom: 200%"
-					width="75%"
-				></iframe>
-			</div>
-			<div class="m-4">
-				<iframe
-					src="https://map.stemm1.org/#world_nether:0:0:0:1500:0:0:0:0:perspective"
-					title="World"
-					class="enlargemc m-auto z-1000"
-					style="zoom: 200%"
-					width="75%"
-				></iframe>
-			</div>
-		</div>
+
+		<a href="browserGame">
+			<img class="of-hidden enlarge max-w-450px max-h-250px" src="/othello.png" alt="Othello Logo" />
+		</a>
 
 		<a on:click={() => (location.href = 'discord')}
 			><img
 				class="enlarge max-w-400 max-h-168px of-hidden m-10"
 				src="/discord-logo_smal.jpg"
-				alt=""
+				alt="Discord Logo"
 			/></a
 		>
 		<div class="flex flex-col items-end color-white">

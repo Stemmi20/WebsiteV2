@@ -45,7 +45,7 @@
 					type="text"
 					name="username"
 					placeholder="User Name: {data.username?.username}"
-					class="text-center font-size-xl"
+					class="text-center font-size-xl rounded-lg p-2"
 					autocomplete="username"
 					readonly
 				/>
@@ -55,7 +55,7 @@
 					type="text"
 					name="firstname"
 					placeholder="First Name: {data.firstname?.firstname}"
-					class="text-center font-size-xl"
+					class="text-center font-size-xl rounded-lg p-2"
 					autocomplete="username"
 					readonly
 				/>
@@ -65,7 +65,7 @@
 					type="text"
 					name="lastname"
 					placeholder="Last Name: {data.lastname?.lastname}"
-					class="text-center font-size-xl"
+					class="text-center font-size-xl rounded-lg p-2"
 					autocomplete="username"
 					readonly
 				/>
@@ -78,7 +78,7 @@
 					type="password"
 					name="password"
 					placeholder="Old Password"
-					class="text-center font-size-xl"
+					class="text-center font-size-xl rounded-lg p-2"
 					autocomplete="current-password"
 				/>
 			</div>
@@ -87,7 +87,7 @@
 					type="password"
 					name="newpassword"
 					placeholder="New Password"
-					class="text-center font-size-xl"
+					class="text-center font-size-xl rounded-lg p-2"
 					autocomplete="new-password"
 				/>
 			</div>
@@ -96,7 +96,7 @@
 					type="password"
 					name="confirmpassword"
 					placeholder="Confirm Password"
-					class="text-center font-size-xl"
+					class="text-center font-size-xl rounded-lg p-2"
 					autocomplete="new-password"
 				/>
 			</div>

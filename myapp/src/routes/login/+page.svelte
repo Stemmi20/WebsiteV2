@@ -50,7 +50,7 @@
 			type="text"
 			name="username"
 			placeholder="UserName"
-			class="text-center font-size-xl"
+			class="text-center font-size-xl rounded-lg p-2"
 			autocomplete="username"
 		/>
 
@@ -58,7 +58,7 @@
 			type="password"
 			name="password"
 			placeholder="Password"
-			class="text-center font-size-xl"
+			class="text-center font-size-xl rounded-lg p-2"
 			autocomplete="current-password"
 		/>
 

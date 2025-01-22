@@ -17,12 +17,19 @@
 </script>
 
 <main>
-	<h1 class="color-white">Othello</h1>
-	<a
-		class="mb-10 font-size-xl font-bold bg-gradient-to-r from-[#006EFF] via-[#16d410] to-[#006EFF] bg-[length:200%] p-2 px-6 rounded-xl transition-all bg-[position:0%_center] hover:bg-[position:100%_center] font-bold text-shadow-none disabled:opacity-50 disabled:cursor-not-allowed"
-		on:click={ () =>window.location.reload()}>New Game</a
-	>
-	<div class="mt-10">
-		<Board {board} {currentPlayer} on:move={handleMove} />
+	<div class="ml-5">
+		<h2 class="color-white">Othello</h2>
+		<div class="flex flex-row items-center">
+			<a
+				class="font-size-xl font-bold bg-gradient-to-r from-[#006EFF] via-[#16d410] to-[#006EFF] bg-[length:200%] p-2 px-4 rounded-xl transition-all bg-[position:0%_center] hover:bg-[position:100%_center] font-bold text-shadow-none disabled:opacity-50 disabled:cursor-not-allowed"
+				on:click={() => window.location.reload()}>New Game</a
+			>
+			<div class="color-white font-size-xl ml-5">
+				{currentPlayer === 1 ? 'Black' : 'Grey'}'s turn
+			</div>
+		</div>
+		<div class="mt-5">
+			<Board {board} {currentPlayer} on:move={handleMove} />
+		</div>
 	</div>
 </main>
